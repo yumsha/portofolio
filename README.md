@@ -65,8 +65,8 @@ A few highlights:
 I'm always down to collab, freelance, or just talk tech.
 
 - GitHub → [@yumsha](https://github.com/yumsha)
-- Email → `riza@email.com`
-- LinkedIn? Maybe someday 😄
+- Email → `muhamadrizapahlevi12@gmail.com`
+- LinkedIn? Muhamad Riza Pahlevi (yumsha)
 
 ## 🪪 License
 
