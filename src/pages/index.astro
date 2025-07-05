@@ -1,0 +1,224 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <!-- Navbar -->
+  <div class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-fit px-6 py-2 bg-zinc-900/60 backdrop-blur-md text-white rounded-full shadow-lg flex items-center gap-6 border border-zinc-800">
+    <div class="flex gap-6 text-sm font-medium">
+      <a href="#home" class="hover:text-indigo-400 transition">Home</a>
+      <a href="#about" class="hover:text-indigo-400 transition">About</a>
+      <a href="#projects" class="hover:text-indigo-400 transition">Projects</a>
+    </div>
+    <span class="h-6 w-px bg-zinc-700 mx-2"></span>
+    <div class="flex gap-4 text-lg">
+      <a href="https://github.com/" target="_blank" aria-label="GitHub" class="hover:text-indigo-400 transition">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="/resume.pdf" target="_blank" aria-label="Resume" class="hover:text-indigo-400 transition">
+        <i class="fa-regular fa-file-lines"></i>
+      </a>
+      <button aria-label="Toggle theme" class="hover:text-indigo-400 transition">
+        <i class="fa-solid fa-sun"></i>
+      </button>
+    </div>
+  </div>
+
+
+
+  
+  <main class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-[#000000] to-[#52057B]">
+    <div class="min-h-[80vh] flex items-center justify-between px-8 mt-32  md:px-20 py-12 text-white relative">
+      <!-- Kiri -->
+      <div class="max-w-xl z-10">
+        <h1 class="text-3xl sm:text-4xl font-semibold mb-2">
+          Halo semuanya! <span class="inline-block animate-wave">👋</span>, saya
+        </h1>
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-[#892CDC] mb-6">Muhamad Riza Pahlevi</h2>
+        <p class="text-lg leading-relaxed text-zinc-300 mb-6">
+          Seorang Web Developer yang antusias menciptakan pengalaman web yang modern, dan user-friendly.
+        </p>
+
+        <!-- Icon Sosial -->
+        <div class="flex gap-4">
+          <a href="https://github.com" target="_blank" class="bg-zinc-900/60 backdrop-blur-md p-3 rounded-full text-xl">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="bg-zinc-900/60 backdrop-blur-md p-3 rounded-full text-xl">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:riza@email.com" class="bg-zinc-900/60 backdrop-blur p-3 rounded-full text-xl">
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Kanan -->
+      <!-- <div class="relative hidden md:block"> -->
+        <!-- Background bentuk -->
+        <!-- <div class="absolute -top-6 -left-10 w-48 h-64 bg-teal-500 rounded-[60%] z-0"></div> -->
+        <!-- Foto -->
+        <!-- <img src="/assets/riza.png" alt="Foto Riza" class="relative z-10 w-64 object-contain" /> -->
+      <!-- </div> -->
+    </div>
+
+    <!-- About ME -->
+  <div id="about" class="px-6 mt-32 md:px-20 py-20 text-white">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-10">
+    
+    <!-- Kiri: Teks -->
+    <div class="flex-1">
+      <h2 class="text-3xl font-bold mb-2 text-white">Tentang Saya</h2>
+      <h3 class="text-xl font-semibold text-indigo-400 mb-4 h-6 overflow-hidden relative">
+        <span id="role-rotator" class="block text-indigo-400 transition-all duration-500"></span>
+      </h3>
+      <p class="text-zinc-300 leading-relaxed">
+        Saya <span class="text-white font-medium">Muhamad Riza Pahlevi</span>, seorang junior web developer yang berfokus pada tampilan dan fungsionalitas web modern. 
+        Terbiasa membangun antarmuka responsif dan dinamis menggunakan HTML, CSS, JavaScript, dan framework seperti Tailwind dan Astro. 
+        Saya senang mengutak-atik localStorage, styling interaktif, dan sistem modular JavaScript. Lalu selain meminati hal Programming, saya juga dapat menggunakan
+        software 3D seperti Blender, Autodesk Maya, dan Autodesk 3DS Max untuk membuat asset 3D yang dapat digunakan dalam berbagai proyek, terkadang saya menggunakan ini untuk membuat mod game.
+      </p>
+    </div>
+
+    <!-- Kanan: Skill Cards -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 flex-1">
+      <div class="bg-zinc-900 rounded-lg p-4 flex flex-col items-center hover:bg-zinc-800 transition">
+        <i class="fa-brands fa-html5 text-[#892CDC] text-2xl mb-2"></i>
+        <span class="text-sm">HTML</span>
+      </div>
+      <div class="bg-zinc-900 rounded-lg p-4 flex flex-col items-center hover:bg-zinc-800 transition">
+        <i class="fa-brands fa-css3-alt text-[#892CDC] text-2xl mb-2"></i>
+        <span class="text-sm">CSS</span>
+      </div>
+      <div class="bg-zinc-900 rounded-lg p-4 flex flex-col items-center hover:bg-zinc-800 transition">
+        <i class="fa-brands fa-js text-[#892CDC] text-2xl mb-2"></i>
+        <span class="text-sm">JavaScript</span>
+      </div>
+      <div class="bg-zinc-900 rounded-lg p-4 flex flex-col items-center hover:bg-zinc-800 transition">
+        <i class="fa-solid fa-wind text-[#892CDC] text-2xl mb-2"></i>
+        <span class="text-sm">Tailwind CSS</span>
+      </div>
+      <div class="bg-zinc-900 rounded-lg p-4 flex flex-col items-center hover:bg-zinc-800 transition">
+        <i class="fa-brands fa-node-js text-[#892CDC] text-2xl mb-2"></i>
+        <span class="text-sm">Node.js</span>
+      </div>
+      <div class="bg-zinc-900 rounded-lg p-4 flex flex-col items-center hover:bg-zinc-800 transition">
+        <i class="fab fa-php text-[#892CDC] text-2xl mb-2"></i>
+        <span class="text-sm">php</span>
+      </div>
+      <div class="bg-zinc-900 rounded-lg p-4 flex flex-col items-center hover:bg-zinc-800 transition">
+        <i class="fa-solid fa-cube text-[#892CDC] text-2xl mb-2"></i>
+        <span class="text-sm">Blender</span>
+      </div>
+      <div class="bg-zinc-900 rounded-lg p-4 flex flex-col items-center hover:bg-zinc-800 transition">
+        <i class="fa-solid fa-cubes text-[#892CDC] text-2xl mb-2"></i>
+        <span class="text-sm">Autodesk</span>
+      </div>
+      <div class="bg-zinc-900 rounded-lg p-4 flex flex-col items-center hover:bg-zinc-800 transition">
+        <i class="fa-solid fa-star text-[#892CDC] text-2xl mb-2"></i>
+        <span class="text-sm">Astro</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Projek -->
+    <div id="projects" class="w-full max-w-6xl mt-64 px-4 py-16 mx-auto">
+      <h2 class="text-3xl font-bold text-white mb-10 text-center">Proyek Saya</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project Card -->
+        <div class="bg-zinc-900 rounded-xl shadow-lg overflow-hidden group transition hover:-translate-y-1 hover:shadow-xl duration-300">
+          <img src="./src/assets/project1.png" alt="Project 1" class="w-full h-52 object-cover">
+          <div class="p-5">
+            <h3 class="text-white text-lg font-semibold mb-1">Automated Chat System</h3>
+            <p class="text-gray-400 text-sm mb-4">
+              Sistem chatbot  otomatis Discord dengan integrasi dari discord.js untuk memberikan pesan otomatis kepada user setiap text-channel baru dibuat.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-blue-600/10 text-blue-400 text-xs font-medium px-3 py-1 rounded-full">Express</span>
+              <span class="bg-blue-600/10 text-blue-400 text-xs font-medium px-3 py-1 rounded-full">JavaScript</span>
+              <span class="bg-blue-600/10 text-blue-400 text-xs font-medium px-3 py-1 rounded-full">NodeJS</span>
+              <span class="bg-blue-600/10 text-blue-400 text-xs font-medium px-3 py-1 rounded-full">Discord.js</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="bg-zinc-900 rounded-xl shadow-lg overflow-hidden group transition hover:-translate-y-1 hover:shadow-xl duration-300">
+          <img src="./src/assets/project2.png" alt="Project 2" class="w-full h-52 object-cover">
+          <div class="p-5">
+            <h3 class="text-white text-lg font-semibold mb-1">Shopily – ECommerce Platform</h3>
+            <p class="text-gray-400 text-sm mb-4">
+              Web e-commerce modular dengan fitur keranjang belanja, checkout, dan integrasi pembayaran. lalu menggunakan integrasi API untuk data produk 
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-blue-600/10 text-blue-400 text-xs font-medium px-3 py-1 rounded-full">HTML5</span>
+              <span class="bg-blue-600/10 text-blue-400 text-xs font-medium px-3 py-1 rounded-full">JavaScript</span>
+              <span class="bg-blue-600/10 text-blue-400 text-xs font-medium px-3 py-1 rounded-full">TailwindCSS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="bg-zinc-900 rounded-xl shadow-lg overflow-hidden group transition hover:-translate-y-1 hover:shadow-xl duration-300">
+          <img src="./src/assets/project3.png" alt="Project 3" class="w-full h-52 object-cover">
+          <div class="p-5">
+            <h3 class="text-white text-lg font-semibold mb-1">Portofolio Websites</h3>
+            <p class="text-gray-400 text-sm mb-4">
+              Website portofolio pribadi yang menampilkan proyek, keterampilan, dan informasi kontak saya. Dibuat dengan Astro dan Tailwind CSS untuk performa optimal dan desain responsif.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-blue-600/10 text-blue-400 text-xs font-medium px-3 py-1 rounded-full">Astro</span>
+              <span class="bg-blue-600/10 text-blue-400 text-xs font-medium px-3 py-1 rounded-full">React</span>
+              <span class="bg-blue-600/10 text-blue-400 text-xs font-medium px-3 py-1 rounded-full">TailwindCSS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <footer class=" mt-10  text-white w-full">
+    <!-- divider -->
+    <div class="w-full h-px bg-zinc-800 my-8"></div>
+    <div class="w-full max-w-6xl mx-auto text-center py-4 px-4">
+      <p class="text-gray-400 text-sm">© 2023 Muhamad Riza Pahlevi. All rights reserved.</p>
+      <p class="text-gray-500 text-xs mt-1">Made with ☕ by yumsha using Astro and Tailwind CSS</p>
+    </div>
+  </footer>
+  </main>
+  <script>
+  const roles = [
+    "Front-end Developer",
+    "Back-end Developer",
+    "3D Artist"
+  ];
+
+  const rotator = document.getElementById("role-rotator");
+  let i = 0;
+
+  function rotateText() {
+    if (!rotator) return;
+
+    // Mulai fade out
+    rotator.classList.remove("animate-fadeSlideUp");
+
+    // Setelah fade out selesai, ganti teks lalu fade in
+    setTimeout(() => {
+      rotator.textContent = roles[i];
+      rotator.classList.add("animate-fadeSlideUp");
+      rotator.classList.remove("animate-fadeOut");
+
+      i = (i + 1) % roles.length;
+    }, 500); // waktu fadeOut
+  }
+
+  rotateText();
+  setInterval(rotateText, 3000); // total 3s per role
+
+
+</script>
+
+</Layout>
