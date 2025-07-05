@@ -1,52 +1,78 @@
-# Astro Starter Kit: Basics
 
-```sh
-npm create astro@latest -- --template basics
+# ✨ Riza's Web Portfolio
+
+Hey there! 👋  
+I'm **Muhamad Riza Pahlevi**, just a regular guy who loves turning ideas into websites and 3D art.  
+This portfolio is where I showcase the stuff I’ve built — from sleek frontend designs to backend logic and even a little 3D spice 🍥
+
+## 🔧 Tech Stack I Play With
+
+- 🚀 **Astro** — fast, modern site builder
+- 💅 **Tailwind CSS** — utility-first, no headache
+- 🧠 **JavaScript** — vanilla + modular setup
+- 🎨 **Blender / Maya / 3DS Max** — for 3D assets, mods, and creative stuff
+
+## 💻 What's Inside?
+
+Here's a quick peek at the folder layout:
+
+```
+.
+├── public/            → Static stuff (images, resume, etc.)
+├── src/
+│   ├── components/    → Reusable chunks (navbar, cards, etc.)
+│   ├── layouts/       → Page wrappers
+│   └── pages/         → Main pages (like index.astro)
+├── .gitignore
+├── astro.config.mjs
+├── tailwind.config.js
+├── package.json
+└── README.md
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## ⚙️ How to Run This Thing
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Wanna check it out locally? Easy:
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+```bash
+# 1. Grab the dependencies
+npm install
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+# 2. Launch the dev server
+npm run dev
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+Then head over to [http://localhost:4321](http://localhost:4321) on your browser. Boom, you're in!
 
-## 🧞 Commands
+## 💡 Highlights
 
-All commands are run from the root of the project, from a terminal:
+- 🔁 Animated role text ("Frontend Dev", "Backend Dev", "3D Artist", etc)
+- 🌫️ Glassmorphism-style navbar
+- 🎯 Clean, responsive layout
+- 🎨 Gradient cards for projects
+- 📱 Mobile-first design
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 🛠️ Projects Featured
 
-## 👀 Want to learn more?
+A few highlights:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **🛒 Shopily** — ecommerce web app with cart & checkout  
+- **🤖 Discord Bot System** — automatic messages using discord.js  
+- **🌐 This Portfolio Site** — modular Astro + Tailwind setup
+
+## 📬 Let’s Connect
+
+I'm always down to collab, freelance, or just talk tech.
+
+- GitHub → [@yumsha](https://github.com/yumsha)
+- Email → `riza@email.com`
+- LinkedIn? Maybe someday 😄
+
+## 🪪 License
+
+This project is open for inspiration or collab.  
+Feel free to fork or remix — just drop some credits back, ya? ✌️
+
+---
+
+Thanks for checking it out. You're awesome! 🚀
