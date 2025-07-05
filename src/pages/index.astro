@@ -202,21 +202,19 @@ import Layout from '../layouts/Layout.astro';
   function rotateText() {
     if (!rotator) return;
 
-    // Mulai fade out
     rotator.classList.remove("animate-fadeSlideUp");
 
-    // Setelah fade out selesai, ganti teks lalu fade in
     setTimeout(() => {
       rotator.textContent = roles[i];
       rotator.classList.add("animate-fadeSlideUp");
       rotator.classList.remove("animate-fadeOut");
 
       i = (i + 1) % roles.length;
-    }, 500); // waktu fadeOut
+    }, 500);
   }
 
   rotateText();
-  setInterval(rotateText, 3000); // total 3s per role
+  setInterval(rotateText, 3000);
 
 
 </script>
