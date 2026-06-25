@@ -1,0 +1,79 @@
+---
+const experiences = [
+  {
+    role: 'Team Lead & Frontend Developer',
+    company: 'CharityChain',
+    event: 'Internet Computer WCHL Hackathon',
+    date: '2025',
+    description: 'Led 4-person team through Qualifier, National, and Regional rounds (~1,000 teams). Built the frontend MVP, collaborated with backend and blockchain developers. Managed planning, feature prioritization, and team coordination.',
+    tags: ['React.js', 'TypeScript', 'ICP', 'Motoko'],
+    color: 'primary',
+    bg: 'bg-blue-light',
+    icon: 'fa-solid fa-link',
+  },
+  {
+    role: 'Mobile App Developer & Software Designer',
+    company: 'TakeOver',
+    event: 'Refactory Hackathon x Amikom Yogyakarta',
+    date: '2025',
+    description: 'Led 3-person team in offline hackathon. Built core features in Kotlin, contributed to UI/UX design, and created C4 architecture diagrams. Achieved 4th place out of 15 teams.',
+    tags: ['Kotlin', 'UI/UX', 'C4 Architecture'],
+    color: 'secondary',
+    bg: 'bg-orange-light',
+    icon: 'fa-solid fa-mobile-screen',
+  },
+];
+---
+
+<section id="experience" class="px-6 md:px-20 py-20">
+  <div class="max-w-7xl mx-auto">
+    <div class="section-label bg-blue-light text-primary mb-8 -rotate-1">
+      <i class="fa-solid fa-briefcase mr-1"></i> Experience
+    </div>
+
+    <h2 class="text-3xl md:text-4xl font-black mb-12">
+      Where I've <span class="text-secondary">made an impact</span>.
+    </h2>
+
+    <div class="relative">
+      <!-- Timeline line -->
+      <div class="absolute left-6 md:left-8 top-0 bottom-0 w-0.5 bg-ink"></div>
+
+      <div class="space-y-10">
+        {experiences.map((exp) => (
+          <div class="relative flex gap-6 md:gap-8">
+            <!-- Timeline dot -->
+            <div class={`relative z-10 flex-shrink-0 w-12 h-12 md:w-16 md:h-16 ${exp.bg} border-2 border-ink rounded-xl flex items-center justify-center shadow-neo-sm`}>
+              <i class={`${exp.icon} text-lg md:text-xl`}></i>
+            </div>
+
+            <!-- Card -->
+            <div class="flex-1 neo-card p-6">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+                <div>
+                  <h3 class="font-bold text-lg">{exp.role}</h3>
+                  <p class={`text-sm font-semibold ${exp.color === 'primary' ? 'text-primary' : 'text-secondary'}`}>
+                    {exp.company} — {exp.event}
+                  </p>
+                </div>
+                <span class="neo-tag bg-surface text-muted flex-shrink-0 self-start">
+                  {exp.date}
+                </span>
+              </div>
+              <p class="text-muted text-sm leading-relaxed mb-4">
+                {exp.description}
+              </p>
+              <div class="flex flex-wrap gap-2">
+                {exp.tags.map((tag) => (
+                  <span class={`${exp.bg} ${exp.color === 'primary' ? 'text-primary' : 'text-secondary'} text-xs font-mono font-medium px-2.5 py-1 rounded-md border border-ink`}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,322 @@
+---
+const categories = ['All', 'Web App', 'Mobile', 'AI / ML', 'Bot'];
+
+const categoryStyles = {
+  'Web App': { bg: 'bg-blue-light', text: 'text-primary', border: 'border-primary' },
+  'Mobile': { bg: 'bg-orange-light', text: 'text-secondary', border: 'border-secondary' },
+  'AI / ML': { bg: 'bg-green-light', text: 'text-success', border: 'border-success' },
+  'Bot': { bg: 'bg-blue-light', text: 'text-primary', border: 'border-primary' },
+};
+
+const projects = [
+  {
+    name: 'Exulify',
+    tagline: 'Extracurricular Management System',
+    description:
+      'School Final Assessment Project. A web-based extracurricular management system for schools, handling student participation, activity tracking, and administration.',
+    stack: ['TypeScript', 'Next.js'],
+    color: 'primary',
+    bg: 'bg-blue-light',
+    accent: 'bg-primary',
+    icon: 'fa-solid fa-school',
+    category: 'Web App',
+    links: [
+      { url: 'https://github.com/Exulify/Exulify', label: 'Frontend' },
+      { url: 'https://github.com/Exulify/Exulify-API', label: 'API' },
+    ],
+  },
+  {
+    name: 'PiringNegeri',
+    tagline: 'Indonesian Culinary Heritage Platform',
+    description:
+      'An ecosystem dedicated to Indonesian culinary heritage, connecting food enthusiasts with authentic flavors through modern technology. Includes a REST API backend, an Astro-powered web frontend, and a React Native mobile app.',
+    stack: ['JavaScript', 'Express.js', 'Astro', 'React Native', 'PostgreSQL'],
+    color: 'success',
+    bg: 'bg-green-light',
+    accent: 'bg-success',
+    icon: 'fa-solid fa-bowl-food',
+    category: 'Web App',
+    links: [{ url: 'https://github.com/PiringNegeri', label: 'Organization' }],
+  },
+  {
+    name: 'TakeOver',
+    tagline: 'Mobile App — Refactory Hackathon',
+    description:
+      'Mobile application built during the TakeOver offline hackathon (Refactory x Amikom Yogyakarta). Core features developed in Kotlin with a structured Android architecture. Achieved 4th place out of 15 teams.',
+    stack: ['Kotlin', 'Android'],
+    color: 'secondary',
+    bg: 'bg-orange-light',
+    accent: 'bg-secondary',
+    icon: 'fa-solid fa-mobile-screen-button',
+    category: 'Mobile',
+    links: [{ url: 'https://github.com/yumsha/takeover-fe', label: 'GitHub' }],
+  },
+  {
+    name: 'Face Recognition App',
+    tagline: 'Real-time Face Detection & Recognition',
+    description:
+      'A real-time face recognition app using a webcam feed. Detects and compares faces against a known dataset, labels recognized individuals by name, and draws bounding boxes on detected faces.',
+    stack: ['Python', 'OpenCV', 'face_recognition'],
+    color: 'primary',
+    bg: 'bg-blue-light',
+    accent: 'bg-primary',
+    icon: 'fa-solid fa-camera',
+    category: 'AI / ML',
+    links: [{ url: 'https://github.com/yumsha/facedetection', label: 'GitHub' }],
+  },
+  {
+    name: 'Fake News Detection',
+    tagline: 'ML-based News Classifier',
+    description:
+      'A machine learning-based fake news classifier. Trains on labeled news datasets (true.csv / fake.csv) and detects whether a given news article is real or fabricated.',
+    stack: ['Python', 'scikit-learn'],
+    color: 'secondary',
+    bg: 'bg-orange-light',
+    accent: 'bg-secondary',
+    icon: 'fa-solid fa-brain',
+    category: 'AI / ML',
+    links: [{ url: 'https://github.com/yumsha/fake-news-detection', label: 'GitHub' }],
+  },
+  {
+    name: 'BengkelPancong Bot',
+    tagline: 'Discord Ticket Bot',
+    description:
+      'A Discord bot for automating ticket management. Automatically sends rich embed messages when a ticket is created, supports image embeds (QR codes, payment screenshots), prevents duplicate messages from conflicting bots, and handles multi-category ticket flows via environment variables. Deployed on Render for 24/7 uptime.',
+    stack: ['Node.js', 'discord.js v14', 'Express.js', 'dotenv', 'Render.com'],
+    color: 'success',
+    bg: 'bg-green-light',
+    accent: 'bg-success',
+    icon: 'fa-solid fa-robot',
+    category: 'Bot',
+    links: [],
+    isPrivate: true,
+  },
+  {
+    name: 'TemuIlmu',
+    tagline: 'Student Community Platform',
+    description:
+      'Social platform for Indonesian students: community interaction, content sharing, and educational resources. Designed to comply with regulations on social media use for minors.',
+    stack: ['Next.js', 'TypeScript', 'Express.js', 'MySQL'],
+    color: 'primary',
+    bg: 'bg-blue-light',
+    accent: 'bg-primary',
+    icon: 'fa-solid fa-graduation-cap',
+    category: 'Web App',
+    links: [{ url: '#', label: 'GitHub' }],
+  },
+  {
+    name: 'Sentinel',
+    tagline: 'AI Content Moderation System',
+    description:
+      'Detects harmful content, cyberbullying, hate speech, and spam across online communities and educational platforms using NLP models.',
+    stack: ['PyTorch', 'Hugging Face', 'IndoBERT', 'OpenCV', 'PostgreSQL'],
+    color: 'secondary',
+    bg: 'bg-orange-light',
+    accent: 'bg-secondary',
+    icon: 'fa-solid fa-shield-halved',
+    category: 'AI / ML',
+    links: [{ url: '#', label: 'GitHub' }],
+  },
+  {
+    name: 'CharityChain',
+    tagline: 'Blockchain Charity Platform',
+    description:
+      'Decentralized donation platform with transparent tracking via ICP and Motoko smart contracts. Built during WCHL Hackathon.',
+    stack: ['React.js', 'TypeScript', 'Motoko', 'ICP'],
+    color: 'success',
+    bg: 'bg-green-light',
+    accent: 'bg-success',
+    icon: 'fa-solid fa-link',
+    category: 'Web App',
+    links: [{ url: '#', label: 'GitHub' }],
+  },
+];
+---
+
+<section id="projects" class="px-6 md:px-20 py-20">
+  <div class="max-w-7xl mx-auto">
+    <div class="section-label bg-orange-light text-secondary mb-8 rotate-1">
+      <i class="fa-solid fa-folder-open mr-1"></i> Projects
+    </div>
+
+    <h2 class="text-3xl md:text-4xl font-black mb-6">
+      Things I've <span class="text-primary">built</span>.
+    </h2>
+
+    <!-- Category Filter -->
+    <div id="project-filters" class="flex flex-wrap gap-2 mb-10">
+      {categories.map((cat) => (
+        <button
+          class="filter-btn text-sm font-semibold px-4 py-1.5 border-2 border-ink rounded-lg transition-all duration-200 shadow-neo-sm cursor-pointer
+            {cat === 'All' ? 'bg-ink text-white' : 'bg-white text-ink hover:shadow-neo-sm-hover hover:-translate-x-0.5 hover:-translate-y-0.5'}"
+          data-category={cat}
+        >
+          {cat}
+        </button>
+      ))}
+    </div>
+
+    <!-- Projects Grid -->
+    <div id="projects-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {projects.map((project, i) => (
+        <div
+          class="project-card neo-card overflow-hidden flex flex-col"
+          data-category={project.category}
+          data-index={i}
+        >
+          <!-- Colored top bar -->
+          <div class={`${project.accent} h-2 border-b-2 border-ink`}></div>
+
+          <div class="p-6 flex flex-col flex-1">
+            <!-- Icon + Name + Category -->
+            <div class="flex items-center gap-3 mb-3">
+              <div
+                class={`${project.bg} border-2 border-ink rounded-lg w-10 h-10 flex items-center justify-center flex-shrink-0`}
+              >
+                <i
+                  class={`${project.icon} ${project.color === 'primary' ? 'text-primary' : project.color === 'secondary' ? 'text-secondary' : 'text-success'}`}
+                ></i>
+              </div>
+              <div class="min-w-0">
+                <h3 class="font-bold text-lg leading-tight truncate">{project.name}</h3>
+                <p
+                  class={`text-xs font-semibold truncate ${project.color === 'primary' ? 'text-primary' : project.color === 'secondary' ? 'text-secondary' : 'text-success'}`}
+                >
+                  {project.tagline}
+                </p>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <p class="text-muted text-sm leading-relaxed mb-4 flex-1">
+              {project.description}
+            </p>
+
+            <!-- Stack badges -->
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              {project.stack.map((tech) => (
+                <span class="font-mono text-[11px] font-medium px-2 py-0.5 border-2 border-ink rounded bg-surface">
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            <!-- Footer: Category tag + Links -->
+            <div class="flex items-center justify-between mt-auto pt-3 border-t-2 border-ink/10">
+              <!-- Category Tag -->
+              <span
+                class={`${categoryStyles[project.category]?.bg} ${categoryStyles[project.category]?.text} font-mono text-[10px] font-bold px-2 py-0.5 border-2 border-ink rounded`}
+              >
+                {project.category}
+              </span>
+
+              <!-- Links / Private Badge -->
+              <div class="flex items-center gap-1.5">
+                {project.isPrivate ? (
+                  <span class="flex items-center gap-1 font-mono text-[10px] font-bold text-muted px-2 py-0.5 border-2 border-muted/40 rounded bg-surface/50">
+                    <i class="fa-solid fa-lock text-[9px]"></i>
+                    Private
+                  </span>
+                ) : (
+                  project.links.map((link) => (
+                    <a
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center gap-1 font-mono text-[10px] font-bold text-ink px-2 py-0.5 border-2 border-ink rounded bg-white shadow-neo-sm hover:shadow-neo-sm-hover hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all duration-200"
+                    >
+                      <i class="fa-brands fa-github text-xs"></i>
+                      {link.label}
+                    </a>
+                  ))
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Show All Button -->
+    <div id="show-all-container" class="flex justify-center mt-8 hidden">
+      <button
+        id="show-all-btn"
+        class="neo-btn-outline text-sm gap-2"
+      >
+        <i class="fa-solid fa-chevron-down text-xs"></i>
+        Show all {projects.length} projects
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+  const INITIAL_VISIBLE = 3;
+
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.project-card');
+  const showAllContainer = document.getElementById('show-all-container');
+  const showAllBtn = document.getElementById('show-all-btn');
+
+  let activeCategory = 'All';
+  let expanded = false;
+
+  function render() {
+    const isAllCategory = activeCategory === 'All';
+
+    cards.forEach((card) => {
+      const index = parseInt(card.dataset.index, 10);
+      const matchCategory = isAllCategory || card.dataset.category === activeCategory;
+
+      // In the "All" category, collapse beyond INITIAL_VISIBLE unless expanded
+      const passCollapse = !isAllCategory || expanded || index < INITIAL_VISIBLE;
+
+      card.style.display = matchCategory && passCollapse ? 'flex' : 'none';
+    });
+
+    // Count visible cards in the current filter to know the total
+    const totalFiltered = Array.from(cards).filter(
+      (c) => c.dataset.category === activeCategory || activeCategory === 'All'
+    ).length;
+
+    // Show "Show all" button only for "All" category when collapsed and there are hidden cards
+    if (isAllCategory && !expanded && cards.length > INITIAL_VISIBLE) {
+      showAllContainer.classList.remove('hidden');
+      showAllBtn.innerHTML =
+        '<i class="fa-solid fa-chevron-down text-xs"></i> Show all ' +
+        cards.length +
+        ' projects';
+    } else {
+      showAllContainer.classList.add('hidden');
+    }
+  }
+
+  function filterProjects(category) {
+    activeCategory = category;
+    expanded = false;
+
+    filterBtns.forEach((btn) => {
+      const isActive = btn.dataset.category === category;
+      btn.classList.toggle('bg-ink', isActive);
+      btn.classList.toggle('text-white', isActive);
+      btn.classList.toggle('bg-white', !isActive);
+      btn.classList.toggle('text-ink', !isActive);
+    });
+
+    render();
+  }
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      filterProjects(btn.dataset.category);
+    });
+  });
+
+  showAllBtn.addEventListener('click', () => {
+    expanded = true;
+    render();
+  });
+
+  // Initial render
+  render();
+</script>

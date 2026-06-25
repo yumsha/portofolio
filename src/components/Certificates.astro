@@ -1,0 +1,53 @@
+---
+const certificates = [
+  {
+    name: 'Internet Computer WCHL Hackathon',
+    detail: 'Qualifications Round & National Round',
+    issuer: 'DFINITY Foundation',
+    date: '2025',
+    icon: 'fa-solid fa-trophy',
+    color: 'primary',
+    bg: 'bg-blue-light',
+  },
+  {
+    name: 'AI/ML Fundamentals',
+    detail: 'Microsoft Azure',
+    issuer: 'Microsoft',
+    date: '2025',
+    icon: 'fa-brands fa-microsoft',
+    color: 'secondary',
+    bg: 'bg-orange-light',
+  },
+];
+---
+
+<section id="certificates" class="px-6 md:px-20 py-20">
+  <div class="max-w-7xl mx-auto">
+    <div class="section-label bg-blue-light text-primary mb-8 -rotate-1">
+      <i class="fa-solid fa-certificate mr-1"></i> Certificates
+    </div>
+
+    <h2 class="text-3xl md:text-4xl font-black mb-10">
+      Verified <span class="text-secondary">achievements</span>.
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl">
+      {certificates.map((cert) => (
+        <div class="neo-card p-5 flex gap-4 items-start">
+          <div class={`${cert.bg} border-2 border-ink rounded-xl w-12 h-12 flex items-center justify-center flex-shrink-0 shadow-neo-sm`}>
+            <i class={`${cert.icon} ${cert.color === 'primary' ? 'text-primary' : 'text-secondary'} text-lg`}></i>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h3 class="font-bold text-sm leading-tight mb-0.5">{cert.name}</h3>
+            <p class="text-xs text-muted">{cert.detail}</p>
+            <div class="flex items-center gap-2 mt-2">
+              <span class="text-[10px] font-mono text-muted">{cert.issuer}</span>
+              <span class="text-muted">·</span>
+              <span class="text-[10px] font-mono text-muted">{cert.date}</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

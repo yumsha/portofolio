@@ -1,3 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  * {
+    border-color: #0D0D0D;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #FFFDF6;
+    color: #0D0D0D;
+  }
+
+  ::selection {
+    background-color: #D2E3FC;
+    color: #0D0D0D;
+  }
+}
+
+@layer components {
+  .neo-card {
+    @apply bg-white border-2 border-ink rounded-lg shadow-neo transition-all duration-200;
+  }
+
+  .neo-card:hover {
+    @apply shadow-neo-hover -translate-x-0.5 -translate-y-0.5;
+  }
+
+  .neo-btn {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 border-2 border-ink rounded-lg font-semibold text-sm shadow-neo transition-all duration-200 cursor-pointer;
+  }
+
+  .neo-btn:hover {
+    @apply shadow-neo-hover -translate-x-0.5 -translate-y-0.5;
+  }
+
+  .neo-btn:active {
+    @apply shadow-none translate-x-1 translate-y-1;
+  }
+
+  .neo-btn-primary {
+    @apply neo-btn bg-primary text-white;
+  }
+
+  .neo-btn-secondary {
+    @apply neo-btn bg-secondary text-white;
+  }
+
+  .neo-btn-outline {
+    @apply neo-btn bg-white text-ink;
+  }
+
+  .neo-tag {
+    @apply inline-flex items-center px-3 py-1 border-2 border-ink rounded-md font-mono text-xs font-medium shadow-neo-sm;
+  }
+
+  .section-label {
+    @apply inline-block px-4 py-1.5 border-2 border-ink rounded-md font-mono text-xs font-bold uppercase tracking-wider shadow-neo-sm -rotate-1;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
